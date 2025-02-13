@@ -73,7 +73,7 @@ typedef struct {
     /* 0x194 */ s32 elemDuration;
     /* 0x198 */ s32 unkFlag;
     /* 0x19C */ s32 calcMode;
-    /* 0x1A0 */ u8 trailType; // 1 is swords, 2 is boomerang, 3 is bombchu, 0 is rest
+    /* 0x1A0 */ TrailType trailType; 
 } EffectBlureInit1; // size = 0x1A0
 
 typedef struct {
@@ -90,7 +90,7 @@ typedef struct {
     /* 0x1B */ u8 mode4Param;
     /* 0x1C */ Color_RGBA8 altPrimColor; // used with drawMode 1
     /* 0x20 */ Color_RGBA8 altEnvColor; // used with drawMode 1
-    /* 0x1A0 */ u8 trailType; // 1 is swords, 2 is boomerang, 3 is bombchu, 4 is stick, 0 is rest
+    /* 0x1A0 */ TrailType trailType;
 } EffectBlureInit2; // size = 0x24
 
 typedef struct {
@@ -110,7 +110,7 @@ typedef struct {
     /* 0x1A1 */ u8 drawMode; // 0: simple; 1: simple with alt colors; 2+: smooth
     /* 0x1A2 */ Color_RGBA8 altPrimColor; // used with drawMode 1
     /* 0x1A6 */ Color_RGBA8 altEnvColor; // used with drawMode 1
-    /* 0x1A0 */ u8 trailType; // 1 is default swords, 2 is boomerang, 3 is bombchu, 0 is rest. 4 is Kokiri, 5 is Master, 6 is BGS, 7 is Stick, 8 is Hammer.
+    /* 0x1A0 */ TrailType trailType; 
 } EffectBlure; // size = 0x1AC
 
 typedef struct {
@@ -261,6 +261,18 @@ typedef enum {
     #include "tables/effect_ss_table.h"
     /* 0x25 */ EFFECT_SS_TYPE_MAX // originally "EFFECT_SS2_TYPE_LAST_LABEL"
 } EffectSsType;
+
+typedef enum {
+    TRAIL_TYPE_REST,
+    TRAIL_TYPE_SWORDS,
+    TRAIL_TYPE_BOOMERANG,
+    TRAIL_TYPE_BOMBCHU,
+    TRAIL_TYPE_KOKIRI_SWORD,
+    TRAIL_TYPE_MASTER_SWORD,
+    TRAIL_TYPE_BIGGORON_SWORD,
+    TRAIL_TYPE_STICK,
+    TRAIL_TYPE_HAMMER
+} TrailType
 
 #undef DEFINE_EFFECT_SS
 #undef DEFINE_EFFECT_SS_UNSET
