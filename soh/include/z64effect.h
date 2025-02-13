@@ -14,6 +14,18 @@ struct PlayState;
 
 #define TOTAL_EFFECT_COUNT SPARK_COUNT + BLURE_COUNT + SHIELD_PARTICLE_COUNT
 
+typedef enum {
+    TRAIL_TYPE_REST,
+    TRAIL_TYPE_SWORDS,
+    TRAIL_TYPE_BOOMERANG,
+    TRAIL_TYPE_BOMBCHU,
+    TRAIL_TYPE_KOKIRI_SWORD,
+    TRAIL_TYPE_MASTER_SWORD,
+    TRAIL_TYPE_BIGGORON_SWORD,
+    TRAIL_TYPE_STICK,
+    TRAIL_TYPE_HAMMER
+} TrailType;
+
 typedef struct {
     /* 0x00 */ u8 active;
     /* 0x01 */ u8 unk_01;
@@ -261,18 +273,6 @@ typedef enum {
     #include "tables/effect_ss_table.h"
     /* 0x25 */ EFFECT_SS_TYPE_MAX // originally "EFFECT_SS2_TYPE_LAST_LABEL"
 } EffectSsType;
-
-typedef enum {
-    TRAIL_TYPE_REST,
-    TRAIL_TYPE_SWORDS,
-    TRAIL_TYPE_BOOMERANG,
-    TRAIL_TYPE_BOMBCHU,
-    TRAIL_TYPE_KOKIRI_SWORD,
-    TRAIL_TYPE_MASTER_SWORD,
-    TRAIL_TYPE_BIGGORON_SWORD,
-    TRAIL_TYPE_STICK,
-    TRAIL_TYPE_HAMMER
-} TrailType
 
 #undef DEFINE_EFFECT_SS
 #undef DEFINE_EFFECT_SS_UNSET
