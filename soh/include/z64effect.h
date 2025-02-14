@@ -24,7 +24,7 @@ typedef enum {
     TRAIL_TYPE_BIGGORON_SWORD,
     TRAIL_TYPE_STICK,
     TRAIL_TYPE_HAMMER
-} TrailType;
+} TrailType; //SOH [Enhancements]
 
 typedef struct {
     /* 0x00 */ u8 active;
@@ -85,7 +85,7 @@ typedef struct {
     /* 0x194 */ s32 elemDuration;
     /* 0x198 */ s32 unkFlag;
     /* 0x19C */ s32 calcMode;
-    /* 0x1A0 */ TrailType trailType; 
+    /* 0x1A0 */ TrailType trailType; //SOH [Enhancements]
 } EffectBlureInit1; // size = 0x1A0
 
 typedef struct {
@@ -102,7 +102,7 @@ typedef struct {
     /* 0x1B */ u8 mode4Param;
     /* 0x1C */ Color_RGBA8 altPrimColor; // used with drawMode 1
     /* 0x20 */ Color_RGBA8 altEnvColor; // used with drawMode 1
-    /* 0x1A0 */ TrailType trailType;
+    /* 0x1A0 */ TrailType trailType; //SOH [Enhancements]
 } EffectBlureInit2; // size = 0x24
 
 typedef struct {
@@ -122,7 +122,7 @@ typedef struct {
     /* 0x1A1 */ u8 drawMode; // 0: simple; 1: simple with alt colors; 2+: smooth
     /* 0x1A2 */ Color_RGBA8 altPrimColor; // used with drawMode 1
     /* 0x1A6 */ Color_RGBA8 altEnvColor; // used with drawMode 1
-    /* 0x1A0 */ TrailType trailType; 
+    /* 0x1A0 */ TrailType trailType; //SOH [Enhancements]
 } EffectBlure; // size = 0x1AC
 
 typedef struct {
